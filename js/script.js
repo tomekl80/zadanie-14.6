@@ -20,15 +20,14 @@ var Counter = React.createClass({
 	},
 
 	render: function() {
-		return React.createElement('div', {onClick: this.increment},
-			React.createElement('div', {onClick: this.decrement}),
-			React.createElement('span', {}, 'Licznik ' + this.state.counter),
+		return React.createElement('span', {}, 'Licznik ' + this.state.counter,
 			React.createElement('br', {}),
 			React.createElement('br', {}),
-			React.createElement('button', {className: 'btn'}, 'Dodaj'),
+			React.createElement('button', {className: 'btn-lg', onClick: this.increment}, 'Dodaj'),
 			React.createElement('br', {}),
-			React.createElement('button', {className: 'btn'}, 'Odejmij')
-		);
+			React.createElement('br', {}),
+			React.createElement('button', {className: 'btn-lg', onClick: this.decrement}, 'Odejmij'),
+		)
 	}
 });
 
